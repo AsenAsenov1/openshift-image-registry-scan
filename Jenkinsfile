@@ -1,13 +1,13 @@
 pipeline {
-  agent any
+  agent { label {'maven'} }
 	
   stages {
 	stage('Initial') {
 	  steps {
 		script {
-		  sh 'for x in {1..255}; do echo $x; done'
-		}
-	  }
-	}
+		  sh 'sleep 42690'
+        }
+      }
+    }
   }
 }
